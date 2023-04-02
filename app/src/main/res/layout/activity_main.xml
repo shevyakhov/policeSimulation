@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/gradient"
+	android:padding="10dp"
+	tools:context=".MainActivity">
+
+	<TextView
+		android:id="@+id/parameters"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:text="@string/parameters"
+		android:textSize="30sp"
+		android:textStyle="bold|italic"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/lPopulationGrowth"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+		android:layout_width="200dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:background="@color/white"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/parameters">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/edPopulationGrowth"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+
+			android:hint="@string/popGrowth"
+			android:inputType="number"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/lPopulationDecline"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+		android:layout_width="200dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:background="@color/white"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/lPopulationGrowth">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/edPopulationDecline"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="@string/popDecline"
+			android:inputType="number"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/lKillerPercent"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+		android:layout_width="200dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:background="@color/white"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/lPopulationDecline">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/edKillerPercent"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="@string/killer_per_crime"
+			android:inputType="number|numberDecimal"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/lCrimeCoef"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+		android:layout_width="200dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:background="@color/white"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/lKillerPercent">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/edCrimeCoef"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="@string/crime_probability"
+			android:inputType="number|numberDecimal"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/lReactionDayTime"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+		android:layout_width="200dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:background="@color/white"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/lCrimeCoef">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/edReactionDayTime"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="@string/reaction_day_time"
+			android:inputType="number"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/lIncome"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+		android:layout_width="200dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:background="@color/white"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/parameters">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/edIncome"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="@string/income"
+			android:inputType="number|numberDecimal"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/lHealthcare"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+		android:layout_width="200dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:background="@color/white"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/lIncome">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/edHealthcare"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="@string/healthcare"
+			android:inputType="number|numberDecimal"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/lEducation"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+		android:layout_width="200dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:background="@color/white"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/lHealthcare">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/edEducation"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="@string/education"
+			android:inputType="number|numberDecimal"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/lEnvironmentQuality"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+		android:layout_width="200dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:background="@color/white"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/lEducation">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/edEnvironmentQuality"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="@string/environmentQuality"
+			android:inputType="number|numberDecimal"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/lPayoff"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+		android:layout_width="200dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:background="@color/white"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/lEnvironmentQuality">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/edPayoff"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="@string/Payoff"
+			android:inputType="number|numberDecimal"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<Button
+		android:textColor="@color/black"
+		android:text="@string/startmodel"
+		android:id="@+id/confirm_button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="20dp"
+		android:background="@drawable/round_gradient"
+		app:backgroundTint="@null"
+		app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

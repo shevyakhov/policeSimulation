@@ -1,0 +1,23 @@
+<resources>
+	<string name="app_name">policeSimulation</string>
+	<string name="start">Запустить симуляцию</string>
+	<string name="stop">Stop</string>
+	<string name="popGrowth">Прирост нас. чел/месяц</string>
+	<string name="popDecline">Убыль нас. чел/месяц</string>
+	<string name="killer_per_crime">К-во убиств на преступление</string>
+	<string name="crime_probability">Коэф преступлений</string>
+	<string name="reaction_day_time">Дни на обращение</string>
+	<string name="education">Образование</string>
+	<string name="healthcare">Здравоохранение </string>
+	<string name="income">Доход </string>
+	<string name="environmentQuality">Окружающая Среда</string>
+	<string name="Payoff">Коэф. откупа(взяток)</string>
+	<string name="parameters">Выбор параметров (0;1)</string>
+	<string name="delayms">Скорость анимации мс</string>
+	<string name="month">Количество месяцев</string>
+	<string name="startmodel">Сохранить модель</string>
+	<string name="efficiency">Эфф-ть полиции</string>
+	<string name="trust">Доверие</string>
+	<string name="lifeLevel">Ур-нь жизни</string>
+
+</resources>
